@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "tokenprac_backend": {
+      "main": "src/tokenprac_backend/main.mo",
+      "type": "motoko"
+    },
+    "tokenprac_frontend": {
+      "dependencies": [
+        "tokenprac_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/tokenprac_frontend/src/index.html"
+      },
+      "source": [
+        "src/tokenprac_frontend/assets",
+        "dist/tokenprac_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
